@@ -35,16 +35,58 @@ body {
   background-image: linear-gradient(to bottom, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
 }
 
+#img-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left top -5rem;
+  background-image: url(/assets/img/bg-pattern-desktop.svg);
+}
+
+#box-img {
+  position: absolute;
+  left: -3rem;
+  bottom: 3rem;
+}
+
+@media (max-width: 500px) {
+  #img-wrapper {
+    top: -10rem;
+  }
+
+  #box-img {
+    left: -1rem;
+    width: 10rem;
+  }
+}
+
+#main-img {
+  width: 100%;
+}
+
 #main-section {
-  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   border-radius: 2rem;
   background-color: white;
+  padding: 3.5rem 2.5rem 5.5rem 1rem;
+}
+
+#main-section * {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 
 #accordion {
   display: flex;
   flex-direction: column;
+  width: 100%;
   max-width: 40rem;
+  padding-right: clamp(0px, 5vw, 5rem);
 }
 
 #accordion > h1 {
